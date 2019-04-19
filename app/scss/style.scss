@@ -1,0 +1,395 @@
+@font-face {
+  font-family: 'KohinoorBanglaLight';
+  src: url('../fonts/KohinoorBanglaLight.eot');
+  src: url('../fonts/KohinoorBanglaLight.eot') format('embedded-opentype'),
+  url('../fonts/KohinoorBanglaLight.woff2') format('woff2'),
+  url('../fonts/KohinoorBanglaLight.woff') format('woff'),
+  url('../fonts/KohinoorBanglaLight.ttf') format('truetype'),
+  url('../fonts/KohinoorBanglaLight.svg#KohinoorBanglaLight') format('svg');
+}
+
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+a{
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+img{
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button{
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  box-shadow: none !important;
+}
+
+input{
+  &::-ms-clear,
+  &::-ms-reveal{
+    display: none;
+  }
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration { display: none; }
+}
+
+select{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  &::-ms-expand{
+    display: none;
+  }
+  &::-ms-backdrop{
+    border: none;
+  }
+  option{
+    border: none;
+  }
+}
+
+textarea{
+  overflow: auto;
+}
+
+ul, ol, li{
+  list-style: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+
+input[type='number']{
+  -moz-appearance: textfield;
+}
+
+
+body{
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+section{
+  @media screen and (min-width: 992px){
+    height: 100vh;
+  }
+}
+
+.container{
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  background-color: transparent;
+  z-index: 150;
+  padding: 30px 0;
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.logo{
+  margin-left: 10px;
+  display: inline-block;
+  width: 79px;
+  height: 69px;
+  position: relative;
+
+  &__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+}
+
+.nav{
+  &-item{
+    display: inline-block;
+    margin-left: 30px;
+
+    &-link{
+      display: inline-block;
+      height: 18px;
+      width: auto;
+
+      &__img{
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.hero {
+  height: 100vh;
+  //background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+
+  &::after{
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  .container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__title {
+    color: rgb(255, 255, 255);
+    font-family: 'Kohinoor Bangla', sans-serif;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 300;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px){
+      font-size: 48px;
+      margin-bottom: 34px;
+    }
+  }
+
+  &-launch{
+    display: inline-flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(160, 207, 50);
+
+    &__caption{
+      color: rgb(255, 255, 255);
+      font-family: 'Kohinoor Bangla', sans-serif;
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 300;
+      padding-right: 25px;
+    }
+
+    &__img{
+      width: 20px;
+      height: auto;
+    }
+  }
+
+  &-text{
+    margin-top: auto;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    font-family: 'Kohinoor Bangla', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.2;
+
+    a{
+      text-decoration: underline;
+
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+
+  &-btn{
+    margin-bottom: 29px;
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    border-radius: 50%;
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../img/arrow.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: 50% 50%;
+    }
+  }
+}
+
+.text-wrapper{
+  margin-top: 250px;
+
+  @media screen and (min-width: 500px){
+    margin-top: 20%;
+  }
+}
+
+.col-wrapper{
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 992px){
+    flex-direction: row;
+    height: 100%;
+  }
+}
+
+section:nth-child(odd) .col-wrapper{
+
+  @media screen and (min-width: 992px){
+    flex-direction: row-reverse;
+  }
+}
+
+.col{
+  &-wide{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-blend-mode: darken;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px;
+
+    @media screen and (min-width: 992px){
+      width: 66.66%;
+      padding: 0;
+    }
+  }
+
+  &-small{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(160, 207, 50);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+
+    @media screen and (min-width: 992px){
+      width: 33.33%;
+      padding: 0 50px;
+    }
+  }
+}
+
+.big-text{
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: 'Kohinoor Bangla', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: -0.32px;
+  max-width: 360px;
+}
+
+.title{
+  color: rgb(160, 207, 50);
+  font-family: 'Kohinoor Bangla', sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: 27px;
+}
+
+.small-text{
+  padding-top: 49px;
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-family: 'Kohinoor Bangla', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 24px;
+
+  &::before{
+    content: '';
+    display: block;
+    background-image: url('../img/section2-icon.png');
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 54px;
+    margin: 0 auto 50px;
+  }
+}
+
+.text-list{
+  padding-top: 24px;
+}
+
+.text-item::before{
+  content: '-';
+  padding-right: 10px;
+}
+
+.text-contact{
+  display: block;
+  margin: 50px auto 0;
+  color: rgb(255, 255, 255);
+  font-family: 'Kohinoor Bangla', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  border: 1px solid white;
+  padding: 11px 32px;
+  border-radius: 10px;
+  max-width: 156px;
+
+
+  &:hover{
+    background-color: #fff;
+    color: rgb(160, 207, 50);
+  }
+}
+

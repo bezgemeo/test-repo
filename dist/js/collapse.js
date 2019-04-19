@@ -1,0 +1,1 @@
+$(document).ready(function(){var e=document.querySelectorAll(".faq-item"),t=document.querySelectorAll(".faq-desсr"),n=function(e){this.classList.contains("opened")?this.classList.remove("opened"):this.classList.add("opened")};t.forEach(function(e){e.addEventListener("click",function(e){e.stopPropagation()})}),e.forEach(function(e){e.addEventListener("click",n)})});

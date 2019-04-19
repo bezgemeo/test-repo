@@ -1,0 +1,5 @@
+@font-face {
+  font-family: 'KohinoorBanglaLight';
+  src: url("fonts/KohinoorBanglaLight.eot");
+  src: url("fonts/KohinoorBanglaLight.eot") format("embedded-opentype"), url("fonts/KohinoorBanglaLight.woff2") format("woff2"), url("fonts/KohinoorBanglaLight.woff") format("woff"), url("fonts/KohinoorBanglaLight.ttf") format("truetype"), url("fonts/KohinoorBanglaLight.svg#KohinoorBanglaLight") format("svg");
+}

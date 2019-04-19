@@ -1,0 +1,55 @@
+<header class="header" id="header">
+    <div class="container">
+        <a href="index.html" class="header-logo">
+            <img src="img/GD-logo.svg" alt="Grow Director Logo" class="header-logo__img">
+        </a>
+
+
+        <!-- JS: toggle for the div class .header-navigation-button_open to change color on a tap -->
+        <div class="header-navigation-button" id="navBtn">
+            <span class="header-navigation-button__item"></span>
+            <span class="header-navigation-button__item"></span>
+            <span class="header-navigation-button__item"></span>
+        </div>
+
+        <!-- JS: toggle for the nav class .opened to reveal nav items list -->
+        <nav class="header-navigation" id="navMenu">
+            <ul>
+                <!-- PHP: for the current item on the corresponding page add the class .active -->
+                <li class="active">
+                    <a href="/features.html">Features</a>
+                </li>
+                <li>
+                    <a href="/tech-specs.html">Tech specs</a>
+                </li>
+                <li>
+                    <a href="/use-cases.html">Use cases</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">App</a>
+                </li>
+                <li>
+                    <a href="/contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="/about.html">About</a>
+                </li>
+                <li>
+                    <a href="/help.html">Help</a>
+                </li>
+                <li>
+                    <a href="/faq.html">Faq</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header-other">
+            <a href="javascript:void(0)" class="order">Pre-Order</a>
+            <a href="javascript:void(0)" class="sync-device">
+                <span class="sync-device__caption">Sync device</span>
+                <img src="img/planet-icon.svg" alt="sync device icon" class="sync-device__icon">
+            </a>
+        </div>
+    </div>
+</header>
+
